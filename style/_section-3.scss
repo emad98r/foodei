@@ -1,0 +1,54 @@
+.section-3 {
+  background-image: url("../imgs/ice\ cream\ section.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10em 5em 5em 43em;
+  height: 100vh;
+  @include breakpoints(mobile) {
+    padding: 0.5em;
+    height: auto;
+  }
+  @include breakpoints(small) {
+    padding: 0.5em;
+    height: auto;
+  }
+  @include breakpoints(medium) {
+    padding: 0.5em;
+    height: auto;
+  }
+  // @include breakpoints(large) {
+  //   padding: 10em 5em 5em 22em;
+  //   height: auto;
+  // }
+  .container {
+    section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+      gap: 2em;
+      @include breakpoints(mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+      }
+      width: 100%;
+
+      article {
+        width: 11em;
+        @include breakpoints(mobile) {
+          width: auto;
+        }
+        background-color: #0000008e;
+        color: $main-color;
+        @include flex;
+        padding: 3em 1em;
+        text-align: center;
+        img {
+          width: 45%;
+          margin-bottom: 1em;
+        }
+        p {
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

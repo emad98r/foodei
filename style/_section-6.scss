@@ -1,0 +1,106 @@
+.section-6 {
+  background-color: $main-color;
+  padding: 5em 0;
+  .container {
+    .info {
+      margin-bottom: 2.5em;
+      text-align: center;
+      h1 {
+        margin-bottom: 0.5em;
+      }
+    }
+    .imgs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 1em;
+      section {
+        display: flex;
+        @include breakpoints(mobile) {
+          flex-direction: column;
+        }
+        &:last-of-type {
+          display: none;
+        }
+        img {
+          width: 100%;
+          padding: 0 0.3em;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1);
+            transition: all 0.5s;
+          }
+        }
+      }
+      .left-arr {
+        width: 3em;
+        height: 3em;
+        background-color: $sub-color;
+        transform: rotateZ(90deg);
+        border-radius: 50%;
+        margin-right: 1em;
+        cursor: pointer;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+        @include breakpoints(mobile) {
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
+      .right-arr {
+        width: 3em;
+        height: 3em;
+        background-color: $sub-color;
+        transform: rotateZ(-90deg);
+        border-radius: 50%;
+        margin-left: 1em;
+        cursor: pointer;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+        @include breakpoints(mobile) {
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
+    }
+    .spans {
+      @include flex;
+      flex-direction: row;
+      margin-bottom: 2em;
+      span {
+        width: 0.7em;
+        height: 0.7em;
+        background-color: $sub-color;
+        margin: 0 0.1em;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.5);
+        }
+        &:first-of-type {
+          opacity: 1;
+        }
+        &:last-of-type {
+          opacity: 0.5;
+        }
+      }
+    }
+    button {
+      width: auto;
+      background-color: transparent;
+      color: $sub-color;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #0c0c0c;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

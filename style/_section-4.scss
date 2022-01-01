@@ -1,0 +1,60 @@
+.section-4 {
+  background-color: $main-color;
+  width: 100%;
+  padding: 6em 0;
+  .container {
+    section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+      @include breakpoints(small) {
+        gap: 2em 5em;
+        grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+      }
+      width: 100%;
+      @include breakpoints(medium) {
+        gap: 2em 5em;
+        grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+      }
+      width: 100%;
+      article {
+        text-align: center;
+        width: 20em;
+        @include flex;
+        justify-content: center;
+        @include breakpoints(mobile) {
+          padding: 1em;
+          width: 100%;
+        }
+        img {
+          width: 118%;
+          @include breakpoints(mobile) {
+            width: 100%;
+          }
+          @include breakpoints(small) {
+            width: 100%;
+          }
+          @include breakpoints(medium) {
+            width: 100%;
+          }
+        }
+        h1 {
+          font-size: 2em;
+        }
+        p {
+          margin-bottom: 1em;
+        }
+        button {
+          width: auto;
+          background-color: transparent;
+          color: $sub-color;
+          font-size: 1.1em;
+          text-transform: uppercase;
+          border-bottom: 1px solid $black-color;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

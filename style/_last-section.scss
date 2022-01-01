@@ -1,0 +1,67 @@
+.last-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  background-color: $main-color;
+  img {
+    width: 100%;
+  }
+}
+
+.about-us {
+  background-color: $main-color;
+  padding: 3em 0;
+  .container {
+    p {
+      font-size: 1.8em;
+      font-weight: 700;
+      font-family: $title-font;
+      text-align: center;
+      padding: 0 1em;
+    }
+    .s-m {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 15%;
+      margin-top: 1em;
+      @include breakpoints(mobile) {
+        width: 40%;
+      }
+      @include breakpoints(small) {
+        width: 30%;
+      }
+      @include breakpoints(medium) {
+        width: 20%;
+      }
+      a {
+        width: 50%;
+        margin: 0.5em auto;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $black-color;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $main-color;
+  @include breakpoints(mobile) {
+    padding: 0 1em;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: red;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}

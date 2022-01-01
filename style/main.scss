@@ -1,0 +1,64 @@
+@import "mixin&vars";
+@import "first-section";
+@import "section-2";
+@import "section-3";
+@import "section-4";
+@import "section-5";
+@import "section-6";
+@import "last-section";
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 75%;
+  margin: 0 auto;
+  @include flex;
+  @include breakpoints(mobile) {
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  font-family: $sub-font;
+}
+
+h1 {
+  font-family: $main-font;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: $title-font;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// to top button ======================
+
+#toTop {
+  width: 3.5em;
+  height: 3.5em;
+  background-color: $black-color;
+  border-radius: 50%;
+  position: fixed;
+  right: 1%;
+  bottom: 5%;
+  transform: rotateZ(180deg) translateY(-100px);
+  transition: all 0.5s;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}

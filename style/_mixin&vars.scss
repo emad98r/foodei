@@ -1,0 +1,49 @@
+// fonts-----------
+$main-font: "Playfair Display", serif;
+$title-font: "Roboto", sans-serif;
+$sub-font: "Open Sans", sans-serif;
+
+// colors -----------
+$main-color: #f2f2f2;
+$sub-color: #333333;
+$black-color: #0c0c0c;
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// mixins________________________
+@mixin breakpoints($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// mixin for display flex ---------------------------
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

@@ -1,0 +1,49 @@
+.second-section {
+  height: auto;
+  width: 100%;
+  background-color: $main-color;
+  padding: 6.5em 0;
+  @include breakpoints(mobile) {
+    padding: 2em 0;
+  }
+  .container {
+    .title {
+      margin: 3.5em 0;
+      text-align: center;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+      width: 100%;
+      gap: 6em 7em;
+      @include breakpoints(mobile) {
+        gap: 3em 7em;
+      }
+      @include breakpoints(small) {
+        overflow: hidden;
+      }
+      article {
+        text-align: center;
+        @include breakpoints(mobile) {
+          width: 85%;
+          padding: 0 0.5em;
+          text-align: left;
+        }
+        h4 {
+          margin-bottom: 1em;
+          span {
+            color: red;
+            font-weight: bold;
+            margin-left: 0.5em;
+          }
+        }
+        p {
+          max-width: 100%;
+          @include breakpoints(mobile) {
+            max-width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
